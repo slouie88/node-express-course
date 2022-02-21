@@ -8,12 +8,12 @@ const {
     deletePerson
 } = require('../controllers/people')
 
-app.get("/", getPeople)
+router.get("/", getPeople)
 
-app.post("/", createPerson) 
+router.post("/", createPerson) 
 
-app.put('/:id', updatePerson)
+router.put('/:id', updatePerson)
 
-app.delete('/:id', deletePerson)
+router.delete('/:id', deletePerson)
 
 module.exports = router
