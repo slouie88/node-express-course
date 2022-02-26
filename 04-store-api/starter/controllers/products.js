@@ -1,7 +1,8 @@
-const { get } = require("mongoose")
+const Product = require('../models/product')
 
 const getAllProductsStatic = async (req, res) => {
-    res.status(200).json({ msg: 'product testing route' })
+    const product = await Product.find({})
+    res.status(200).json({ product })
 }
 
 const getAllProducts = async (req, res) => {
